@@ -1,0 +1,490 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comparison of various image captioning models</title>
+  <meta name="description" content="Comparison of various image captioning models" />
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+  <style>
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      @media (max-width: 800px) {
+        float: left;
+        display: block;
+      }
+    }
+
+    .img-col {
+      max-width: 240px;
+      padding-right: 30px;
+
+      @media (max-width: 800px) {
+        max-width: none;
+        padding-right: none;
+      }
+    }
+  </style>
+</head>
+
+</html>
+
+<body>
+
+  <header class="container">
+    <h1>Comparison of various image captioning models</h1>
+    For more info:
+    <ul>
+      <li><a href="https://huggingface.co/spaces/nielsr/comparing-captioning-models">Interactive demo: comparing image
+          captioning models</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h3>Artworks</h3>
+
+    <section>
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/2018.1_DM.13156.jpg" alt="Lot 043017 (Multiflora, Radiant Blue) by Donald Moffett">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/224276">Lot 043017 (Multiflora,
+              Radiant
+              Blue) by Donald
+              Moffett</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a close up of a blue and white sculpture of a flower</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>arafed letter made of blue yarn with a flower cut out of it</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a piece of paper that has been cut out of it .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a blue piece of art with a hole in it</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/2019.11_view01_SC.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/224733">"... three kings weep ..." by Ebony
+              G. Patterson</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>the [ unused0 ]</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>three men in colorful outfits and hats are posing for a picture</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a man with a yellow hat sitting in front of a wall .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>three men in colorful outfits with hats on</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/2021.45_PS11 (1).jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/224994">The Arm Wrestle of Chip & Spike;
+              aka: Star-Makers by Oscar yi Hou</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a painting of two people standing in front of a wall.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>painting of a couple holding a kite in front of a colorful background</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a painting of two young men holding hands .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a painting of two people in a boxing match</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/CUR.2014.37_Nicola_Vassell_photograph.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/216203">"P31:10" by Rashaad Newsome</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a circular clock with a design of birds and flowers</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there is a clock with a gold frame and a flower decoration</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>an ornate clock with colorful decorations on a white wall .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a large circular clock with a decorative wheel on it</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/CUR.2015.72.2_Magnin-A_photograph.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/220184">"El Moro" by Omar Victor Diop</a>
+          </p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a man in a scarf holding a soccer ball</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there is a man sitting on a bed with a soccer ball</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a man wrapped in a blanket holding a soccer ball .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a man in a traditional african dress holding a soccer ball</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/TL2020.7_PS11.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/224799">"Triumph of the Vanities II" by
+              Cecily Brown</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a painting of a group of people</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>painting of a group of people standing in a line with a dog</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>an abstract painting of a bunch of people .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a painting of a large group of people in red and orange</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/TL2021.66_PS11.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/225053">"Disease Thrower #18" by Guadalupe
+              Maravilla</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a sculpture made of wood and fabric.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there is a sculpture made of dried plants and dried straw</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a sculpture made out of dried plants and flowers .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a sculpture made out of wood and other materials</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/CUR.2017.25.1_KrisGraves_photograph.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/224165">"Tarabu and Mamie Kirkland, Los
+              Angeles, California" by Kris Graves</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>[ unused0 ] and [ unused0 ] sit on the couch in their living room.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there are two people sitting on a couch in a living room</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>an older man sitting on the arm of an older woman .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a man and woman sitting on a couch</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/1999.13.1_PS4.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/2501">"Untitled, Coney Island Series" by
+              Lynn Hyman Butler</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a woman in a yellow dress dancing in front of the tower.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>araffe woman in yellow dress dancing in front of a tower</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a woman in a long yellow dress dancing in front of a cross .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a woman in a yellow dress is dancing in front of a tall building</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/CUR.2003.37_Yossi_Milo_Gallery_photograph.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/165719">"Spring" by Loretta Lux</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a child in a green coat standing in a field.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there is a young child standing on a hill with her arms outstretched</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a little girl standing in the grass with her arms outstretched .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a little girl in a green coat standing on a hill</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="img-col">
+          <figure>
+            <img src="./doc/img/CUR.2012.73a-b_Lehman_Maupin_photo_LM15960.jpg" alt="">
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://bkm-next-search.vercel.app/collection/object/209424">"Monet's Salle a Manger Jaune" by
+              Mickalene Thomas</a></p>
+          <figure>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td><strong>Text</strong></td>
+                </tr>
+                <tr>
+                  <td>GIT-large fine-tuned on COCO</td>
+                  <td><em>a room with a view of a room with a table and chairs.</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-large</td>
+                  <td><em>there is a painting of a room with a checkered floor and a yellow wall</em></td>
+                </tr>
+                <tr>
+                  <td>CoCa</td>
+                  <td><em>a painting of a yellow room with a checkerboard floor .</em></td>
+                </tr>
+                <tr>
+                  <td>BLIP-2 OPT 6.7b</td>
+                  <td><em>a painting of a room with a table and chairs</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <small>Built with <a href="https://picocss.com">Pico</a> •
+      <a href="https://github.com/derekphilipau/image-captioning-model-comparison">Github</a></small>
+  </footer>
+</body>
